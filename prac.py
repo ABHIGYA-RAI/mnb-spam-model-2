@@ -17,7 +17,7 @@ slt.title("Spam Detection Machine Learning Model")
 user_input = slt.text_area("Enter your SMS :")
 def preprocess(sms):
   sms = sms.lower()
-  sms = nltk.word_tokenize(sms)
+  sms = sms.split()
   ls = [ ]
   for i in sms:
     if i.isalnum():
